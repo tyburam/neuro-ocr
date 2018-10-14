@@ -14,8 +14,6 @@ net = OcrNetwork1()
 
 df = pd.read_csv('selfmade.csv')
 labels = process_labels(list(df['message'].values))
-print(len(labels))
-print(len(labels[0]))
 
 images = [misc.imread(path).transpose((1, 0, 2)) for path in list(df['filepath'].values)]
 images = np.asarray(images)
